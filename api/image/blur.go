@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/esimov/stackblur-go"
-	uimage "github.com/rwwiv/go-serverless/util/image"
+	uimage "github.com/rwwiv/go-serverless/util/uimage"
 )
 
 func BlurHandler(w http.ResponseWriter, r *http.Request) {

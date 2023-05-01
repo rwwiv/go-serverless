@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strconv"
 
-	uimage "github.com/rwwiv/go-serverless/util/image"
+	uimage "github.com/rwwiv/go-serverless/util/uimage"
 )
 
 func PixelateHandler(w http.ResponseWriter, r *http.Request) {

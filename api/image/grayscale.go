@@ -6,7 +6,7 @@ import (
 	"image/color"
 	"net/http"
 
-	uimage "github.com/rwwiv/go-serverless/util/image"
+	uimage "github.com/rwwiv/go-serverless/util/uimage"
 )
 
 func GrayScaleHandler(w http.ResponseWriter, r *http.Request) {
