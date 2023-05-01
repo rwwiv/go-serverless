@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strconv"
 
-	uimage "github.com/rwwiv/go-serverless/util/uimage"
+	"github.com/rwwiv/go-serverless/util"
 )
 
 func PixelateHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,7 +32,7 @@ func PixelateHandler(w http.ResponseWriter, r *http.Request) {
 
 	contentType := r.PostFormValue("content_type")
 
-	img, err := uimage.Decode(file, contentType)
+	img, err := util.Decode(file, contentType)
 	if err != nil {
 		w.WriteHeader(http.StatusUnsupportedMediaType)
 		return
@@ -47,7 +47,7 @@ func PixelateHandler(w http.ResponseWriter, r *http.Request) {
 	processedImg := pixelate(img, pixelSize)
 
 	outputBuf := new(bytes.Buffer)
-	err = uimage.Encode(outputBuf, processedImg, contentType)
+	err = util.Encode(outputBuf, processedImg, contentType)
 	if err != nil {
 		panic(err)
 	}

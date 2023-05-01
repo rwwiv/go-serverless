@@ -1,4 +1,4 @@
-package uimage
+package util
 
 import (
 	"errors"

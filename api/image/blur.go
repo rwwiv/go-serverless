@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/esimov/stackblur-go"
-	uimage "github.com/rwwiv/go-serverless/util/uimage"
+	"github.com/rwwiv/go-serverless/util"
 )
 
 func BlurHandler(w http.ResponseWriter, r *http.Request) {
@@ -30,7 +30,7 @@ func BlurHandler(w http.ResponseWriter, r *http.Request) {
 
 	contentType := r.PostFormValue("content_type")
 
-	img, err := uimage.Decode(file, contentType)
+	img, err := util.Decode(file, contentType)
 	if err != nil {
 		w.WriteHeader(http.StatusUnsupportedMediaType)
 		return
@@ -48,7 +48,7 @@ func BlurHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	outputBuf := new(bytes.Buffer)
-	err = uimage.Encode(outputBuf, processedImg, contentType)
+	err = util.Encode(outputBuf, processedImg, contentType)
 	if err != nil {
 		panic(err)
 	}
