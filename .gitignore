@@ -1,0 +1,11 @@
+.vercel
+.env
+local.vercel.json
+
+
+
+# local testing
+main.go
+*.png
+*.jpg
+*.jpeg
