@@ -4,7 +4,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "www.rwwiv.com"
+          "value": "https://www.rwwiv.com"
         },
         {
           "key": "Access-Control-Allow-Methods",
